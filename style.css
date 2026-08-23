@@ -1,0 +1,1487 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #18212B;
+  --muted: #667382;
+  --paper: #F7F8FA;
+  --white: #FFFFFF;
+  --accent: #0B1F33;
+  --accent2: #2F7C7C;
+  --dark: #0B1F33;
+  --line: #D9E0E7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(255, 253, 249, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(138, 90, 59, 0.12);
+}
+
+.nav {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.brand span {
+  color: var(--accent2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4c4742;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 150px 0 80px;
+  background:
+    radial-gradient(circle at 85% 20%, #eadcc9 0, transparent 25%),
+    linear-gradient(135deg, #fbf8f2, #f0e7da);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 5rem;
+  min-height: calc(100vh - 230px);
+}
+
+.eyebrow,
+.section-number {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero h1,
+.section-heading h2,
+.contact-inner h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.hero h1 {
+  font-size: clamp(3.2rem, 6vw, 6rem);
+  max-width: 750px;
+}
+
+em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-text {
+  max-width: 650px;
+  margin: 1.5rem 0 2rem;
+  font-size: 1.08rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.9rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #6f452d;
+}
+
+.btn-secondary {
+  color: var(--accent);
+  background: transparent;
+}
+
+.hero-tags {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.hero-tags span,
+.skill-pills span,
+.project-tags span {
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================
+   HERO PROFILE
+========================================= */
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.portrait-frame {
+  width: min(430px, 80vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 18px solid var(--accent);
+  padding: 10px;
+  background: var(--paper);
+  box-shadow: 0 30px 70px rgba(52, 39, 28, 0.18);
+  overflow: hidden;
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.floating-card {
+  position: absolute;
+  background: var(--dark);
+  color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-card strong {
+  font-size: 1.6rem;
+  color: #e1bd7a;
+}
+
+.floating-card small {
+  color: #ddd;
+}
+
+.card-one {
+  left: 0;
+  top: 12%;
+}
+
+.card-two {
+  right: -80%;
+  bottom: -50%;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+  padding: 110px 0;
+}
+
+.light-section {
+  background: var(--paper);
+}
+
+.dark-section {
+  background: var(--dark);
+  color: white;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.5rem, 4.5vw, 4.6rem);
+}
+
+.centered {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-copy {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.about-copy p + p {
+  margin-top: 1.2rem;
+}
+
+.about-photo {
+  transform: translateY(40px);
+  margin-top: 2rem;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 8px solid var(--accent);
+}
+
+.about-photo img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline {
+  max-width: 900px;
+  margin: 3rem auto 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.year {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.timeline-item h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.65rem;
+}
+
+.institution {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+.experience-card {
+  display: grid;
+  grid-template-columns: 0.8fr 1.25fr 460px;
+  gap: 45px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: 3.5rem 0;
+}
+
+.experience-meta {
+  grid-column: 1;
+}
+
+.experience-content {
+  grid-column: 2;
+}
+
+.experience-meta span {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.experience-meta h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin: 0.4rem 0;
+}
+
+.experience-content li,
+.clean-list li {
+  margin: 0.6rem 0;
+  color: var(--muted);
+}
+
+
+/* =========================================
+   EXPERIENCE IMAGES
+   BOTH IMAGES:
+   WIDTH  = 460px
+   HEIGHT = 300px
+   RADIUS = 28px
+========================================= */
+
+.experience-card .experience-visual {
+  grid-column: 3;
+
+  width: 460px;
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+
+/* Mechanical Design image */
+
+.experience-card .experience-visual > img {
+  width: 460px;
+  height: 300px;
+
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+
+  border-radius: 28px;
+}
+
+
+/* =========================================
+   SECOND EXPERIENCE / JOHN DEERE
+========================================= */
+
+.experience-card.reverse {
+  display: grid;
+  grid-template-columns: 0.8fr 1.25fr 460px;
+  gap: 45px;
+  align-items: center;
+}
+
+.experience-card.reverse .experience-meta {
+  grid-column: 1;
+}
+
+.experience-card.reverse .experience-content {
+  grid-column: 2;
+}
+
+.experience-card.reverse .experience-visual {
+  grid-column: 3;
+
+  width: 460px;
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+
+/* John Deere image card */
+
+.experience-card.reverse .image-card {
+  width: 460px;
+  height: 300px;
+
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+
+/* John Deere image */
+
+.experience-card.reverse .image-card img {
+  width: 460px;
+  height: 300px;
+
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+
+  border-radius: 28px;
+}
+
+
+/* Placeholder */
+
+.experience-card.reverse .experience-placeholder {
+  grid-column: 3;
+
+  width: 460px;
+  height: 300px;
+
+  background: var(--paper);
+
+  padding: 3rem 1.5rem;
+
+  border-radius: 28px;
+
+  color: var(--accent);
+
+  text-align: center;
+  font-size: 1.3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.dark-section .section-number {
+  color: #d4ad69;
+}
+
+.dark-section .section-heading h2 {
+  color: white;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 4rem;
+}
+
+.project-card {
+  border: 1px solid #4b423c;
+  background: #292420;
+  padding: 2rem;
+  border-radius: 20px;
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card.featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #302821, #221e1a);
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: #caa765;
+  margin-bottom: 2rem;
+}
+
+.project-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+}
+
+.project-client {
+  color: #cfc6bb;
+  margin: 0.4rem 0 1rem;
+}
+
+.project-card p:not(.project-client) {
+  color: #c7beb5;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.project-tags span {
+  border-color: #5b4e43;
+  background: #332c26;
+  color: #e3d8ca;
+}
+
+
+/* =========================================
+   INTERNSHIP
+========================================= */
+
+.internship-section {
+  background: #efe6da;
+}
+
+.internship-grid {
+  align-items: center;
+}
+
+.internship-photo {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 10px solid var(--accent);
+  box-shadow: 0 25px 55px rgba(67, 45, 29, 0.15);
+}
+
+.internship-photo img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.role {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin: 1.5rem 0 0.3rem;
+}
+
+.clean-list {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.skill-panel {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.skill-panel h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+/* =========================================
+   CERTIFICATIONS
+========================================= */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.cert-card {
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+}
+
+.cert-card span {
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+}
+
+.cert-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+  margin: 0.7rem 0;
+}
+
+.cert-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+.achievement-section {
+  background: var(--paper);
+}
+
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.achievement {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 1rem;
+
+  padding: 1.5rem;
+
+  border: 1px solid var(--line);
+  border-radius: 18px;
+
+  background: white;
+}
+
+.achievement > span {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.achievement h3 {
+  font-size: 1.15rem;
+}
+
+.achievement p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+  background: var(--accent);
+  color: white;
+  padding: 110px 0 40px;
+}
+
+.contact-inner h2 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  max-width: 950px;
+}
+
+.contact-inner > p:not(.section-number) {
+  max-width: 650px;
+  margin: 1.5rem 0;
+  color: #f0e7dd;
+}
+
+.contact-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2.5rem 0;
+}
+
+.contact-links a {
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 0.2rem;
+}
+
+.footer-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding-top: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #e5d8cb;
+  font-size: 0.82rem;
+}
+
+
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .experience-card,
+  .experience-card.reverse {
+    grid-template-columns: 0.8fr 1.2fr 380px;
+    gap: 30px;
+  }
+
+  .experience-card .experience-visual,
+  .experience-card.reverse .experience-visual {
+    width: 380px;
+    height: 280px;
+
+    border-radius: 28px;
+  }
+
+  .experience-card .experience-visual > img,
+  .experience-card.reverse .image-card,
+  .experience-card.reverse .image-card img {
+    width: 380px;
+    height: 280px;
+
+    border-radius: 28px;
+  }
+
+  .experience-card.reverse .experience-placeholder {
+    width: 380px;
+    height: 280px;
+
+    border-radius: 28px;
+  }
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+
+    background: var(--white);
+
+    display: none;
+    flex-direction: column;
+
+    padding: 1rem 4%;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero-grid,
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero {
+    padding-top: 125px;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .portrait-frame {
+    width: 300px;
+  }
+
+  .floating-card {
+    transform: scale(0.85);
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.featured {
+    grid-column: span 1;
+  }
+
+
+  /* Experience */
+
+  .experience-card,
+  .experience-card.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .experience-card .experience-meta,
+  .experience-card.reverse .experience-meta {
+    grid-column: 1;
+  }
+
+  .experience-card .experience-content,
+  .experience-card.reverse .experience-content {
+    grid-column: 1;
+  }
+
+  .experience-card .experience-visual,
+  .experience-card.reverse .experience-visual {
+    grid-column: 1;
+
+    width: 100%;
+    height: 300px;
+
+    border-radius: 28px;
+  }
+
+  .experience-card .experience-visual > img,
+  .experience-card.reverse .image-card,
+  .experience-card.reverse .image-card img {
+    width: 100%;
+    height: 300px;
+
+    border-radius: 28px;
+  }
+
+  .experience-card.reverse .experience-placeholder {
+    grid-column: 1;
+
+    width: 100%;
+    height: 300px;
+
+    border-radius: 28px;
+  }
+
+
+  .skills-grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .portrait-frame {
+    width: 250px;
+    border-width: 12px;
+  }
+
+  .floating-card {
+    display: none;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-line {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .about-photo img,
+  .internship-photo img {
+    height: 300px;
+  }
+
+
+  /* Experience images on mobile */
+
+  .experience-card,
+  .experience-card.reverse {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .experience-card .experience-meta,
+  .experience-card .experience-content,
+  .experience-card.reverse .experience-meta,
+  .experience-card.reverse .experience-content {
+    width: 100%;
+  }
+
+  .experience-card .experience-visual,
+  .experience-card.reverse .experience-visual {
+    width: 100%;
+    height: 250px;
+
+    order: 3;
+
+    border-radius: 28px;
+  }
+
+  .experience-card .experience-visual > img,
+  .experience-card.reverse .image-card,
+  .experience-card.reverse .image-card img {
+    width: 100%;
+    height: 250px;
+
+    border-radius: 28px;
+  }
+
+  .experience-card.reverse .experience-placeholder {
+    width: 100%;
+    height: 250px;
+
+    border-radius: 28px;
+  }
+}
+/* ==========================================
+   FINAL EXPERIENCE IMAGE FIX
+   SAME SIZE + SAME ROUNDED CORNERS
+========================================== */
+
+/* Mechanical Design + John Deere image containers */
+.experience-card .experience-visual,
+.experience-card .image-card {
+    width: 460px !important;
+    height: 300px !important;
+    overflow: hidden !important;
+    border-radius: 28px !important;
+    display: block !important;
+}
+
+
+/* All experience images */
+.experience-card .experience-visual img,
+.experience-card .image-card img,
+.experience-card > img {
+    width: 460px !important;
+    height: 300px !important;
+
+    max-width: none !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    display: block !important;
+
+    border-radius: 28px !important;
+}
+
+
+/* ==========================================
+   SECOND EXPERIENCE / JOHN DEERE
+========================================== */
+
+.experience-card.reverse .experience-visual,
+.experience-card.reverse .image-card {
+    width: 460px !important;
+    height: 300px !important;
+
+    overflow: hidden !important;
+    border-radius: 28px !important;
+}
+
+.experience-card.reverse .experience-visual img,
+.experience-card.reverse .image-card img {
+    width: 460px !important;
+    height: 300px !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    border-radius: 28px !important;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .experience-card .experience-visual,
+    .experience-card .image-card {
+        width: 100% !important;
+        height: 300px !important;
+        border-radius: 28px !important;
+    }
+
+    .experience-card .experience-visual img,
+    .experience-card .image-card img,
+    .experience-card > img {
+        width: 100% !important;
+        height: 300px !important;
+        object-fit: cover !important;
+        border-radius: 28px !important;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .experience-card .experience-visual,
+    .experience-card .image-card {
+        width: 100% !important;
+        height: 250px !important;
+        border-radius: 28px !important;
+    }
+
+    .experience-card .experience-visual img,
+    .experience-card .image-card img,
+    .experience-card > img {
+        width: 100% !important;
+        height: 250px !important;
+        object-fit: cover !important;
+        border-radius: 28px !important;
+    }
+}
+/* ==========================================
+   CERTIFICATION CARDS
+========================================== */
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-top: 3rem;
+}
+
+
+.cert-card {
+    min-height: 320px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem;
+
+    border: 1px solid var(--line);
+    border-radius: 20px;
+
+    background: var(--paper);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.cert-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(11, 31, 51, 0.10);
+}
+
+
+/* Year */
+
+.cert-card > span {
+    font-size: 0.75rem;
+
+    color: var(--accent);
+
+    letter-spacing: 0.12em;
+
+    font-weight: 600;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* Certificate title */
+
+.cert-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.45rem;
+
+    line-height: 1.45;
+
+    margin-bottom: 0.7rem;
+}
+
+
+/* Certificate organization/date */
+
+.cert-card p {
+    color: var(--muted);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   CLICK TO VIEW BUTTON
+========================================== */
+
+.certificate-btn {
+
+    margin-top: auto;
+
+    align-self: flex-start;
+
+    padding: 0.7rem 1.25rem;
+
+    border: 1px solid var(--accent);
+
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: var(--accent);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.certificate-btn:hover {
+
+    background: var(--accent);
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(11, 31, 51, 0.18);
+}
+
+
+/* ==========================================
+   CERTIFICATE POPUP
+========================================== */
+
+.certificate-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 30px;
+
+    background: rgba(11, 31, 51, 0.88);
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Popup becomes visible */
+
+.certificate-modal.active {
+
+    display: flex;
+}
+
+
+/* ==========================================
+   CERTIFICATE WINDOW
+========================================== */
+
+.certificate-modal-content {
+
+    position: relative;
+
+    width: min(1000px, 95vw);
+
+    max-height: 90vh;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Certificate itself */
+
+.certificate-modal-content img {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 82vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.certificate-close {
+
+    position: absolute;
+
+    top: -18px;
+
+    right: -18px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-size: 1.7rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.certificate-close:hover {
+
+    transform: scale(1.08);
+
+    background: var(--accent2);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .cert-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .cert-card {
+
+        min-height: 280px;
+
+    }
+
+    .certificate-modal {
+
+        padding: 20px;
+
+    }
+
+    .certificate-modal-content {
+
+        width: 100%;
+
+        padding: 10px;
+
+    }
+
+    .certificate-close {
+
+        top: -12px;
+
+        right: -8px;
+
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .certificate-modal {
+
+        padding: 12px;
+
+    }
+
+    .certificate-modal-content {
+
+        padding: 8px;
+
+        border-radius: 12px;
+
+    }
+
+    .certificate-close {
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 1.4rem;
+
+        top: -10px;
+
+        right: -5px;
+
+    }
+
+}

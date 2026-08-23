@@ -1,0 +1,1234 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Parveen Kumar — MBA Finance & Operations | Operations, Supply Chain and Business Analytics portfolio." />
+  <title>Parveen Kumar | Operations & Supply Chain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .highlight-blue {
+    color: #4F91C5;
+    font-weight: 600;
+}
+
+    /* Homepage refinements — balanced single-screen hero */
+    .hero {
+      min-height: calc(100vh - 74px);
+      height: calc(100vh - 74px);
+      padding: 32px 0 28px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      min-height: 100%;
+      height: 100%;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero-copy {
+      align-self: center;
+      padding-top: 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 4.3vw, 4.5rem);
+      line-height: 0.98;
+      max-width: 680px;
+      margin: 0 0 1.25rem;
+    }
+
+    .hero-text {
+      max-width: 620px;
+      margin: 0 0 1.25rem;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      margin-bottom: 1.15rem;
+    }
+
+    .hero-tags {
+      margin-top: 0;
+      gap: .5rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      height: 100%;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(12px);
+    }
+
+    .portrait-frame {
+      width: min(350px, 27vw);
+      height: min(350px, 27vw);
+      flex: 0 0 auto;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+    }
+
+    .hero-name {
+      text-align: center;
+      margin-top: .8rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-name h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 3.1vw, 3.5rem);
+      line-height: 1;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .hero-name p {
+      margin: .45rem 0 0;
+      font-size: .95rem;
+      font-weight: 500;
+      letter-spacing: .025em;
+      color: var(--muted);
+    }
+
+    .floating-card {
+      z-index: 4;
+    }
+
+    .brand {
+      white-space: nowrap;
+    }
+
+    .hero-grid {
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        transform: none;
+      }
+      .hero {
+        height: auto;
+        min-height: calc(100vh - 74px);
+        overflow: visible;
+        padding: 55px 0 50px;
+      }
+
+      .hero-grid {
+        height: auto;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 9vw, 4rem);
+      }
+
+      .hero-visual {
+        height: auto;
+        transform: translateY(12px);
+      }
+
+      .portrait-frame {
+        width: min(330px, 75vw);
+        height: min(330px, 75vw);
+      }
+    }
+    /* Final spacing and sizing adjustments */
+    .hero {
+      min-height: calc(100vh - 74px);
+      height: calc(100vh - 0px);
+      padding: 42px 0 38px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      height: 100%;
+      min-height: 0;
+      align-items: center;
+      gap: 3.5rem;
+      transform: translateY(18px);
+    }
+
+    .hero-copy {
+      align-self: center;
+      padding: 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 3.7vw, 4.2rem);
+      line-height: 1.08;
+      max-width: 670px;
+      margin: 0 0 1.6rem;
+    }
+
+    .hero-text {
+      max-width: 610px;
+      margin: 0 0 1.8rem;
+      font-size: .98rem;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      margin-bottom: 1.35rem;
+      gap: 1.25rem;
+    }
+
+    .hero-tags {
+      margin-top: 0;
+      gap: .55rem;
+    }
+
+    .hero-visual {
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      transform: translate(22px, 8px);
+    }
+
+    .portrait-frame {
+      width: min(410px, 30vw);
+      height: min(410px, 30vw);
+      flex: 0 0 auto;
+    }
+
+    .hero-name {
+      margin-top: 1.7rem;
+      text-align: center;
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-name h2 {
+      font-size: clamp(2.35rem, 3vw, 3.35rem);
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    .hero-name p {
+      margin: .55rem 0 0;
+      font-size: .98rem;
+    }
+
+    .floating-card {
+      z-index: 4;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        height: auto;
+        min-height: calc(100vh - 74px);
+        padding: 42px 0 45px;
+        overflow: visible;
+      }
+
+      .hero-grid {
+        height: auto;
+        gap: 2.5rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.7rem, 8vw, 4rem);
+      }
+
+      .hero-visual {
+        height: auto;
+        transform: translateY(0);
+      }
+
+      .portrait-frame {
+        width: min(360px, 78vw);
+        height: min(360px, 78vw);
+      }
+
+      .hero-name {
+        margin-top: 1.1rem;
+      }
+    }
+
+    /* Latest hero spacing refinement */
+    .hero {
+      min-height: calc(100vh - 74px);
+      height: calc(100vh - 74px);
+      padding: 38px 0 42px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      height: 100%;
+      min-height: 0;
+      align-items: center;
+      gap: 4.25rem;
+    }
+
+    .hero-copy {
+      align-self: center;
+      padding-top: 34px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.05rem, 3.7vw, 4.25rem);
+      line-height: 1.08;
+      max-width: 690px;
+      margin: 0 0 1.7rem;
+      letter-spacing: -0.018em;
+    }
+
+    .hero-text {
+      max-width: 630px;
+      margin: 0 0 2rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.35rem;
+      margin-bottom: 1.45rem;
+    }
+
+    .hero-tags {
+      margin-top: 0;
+      gap: .65rem;
+    }
+
+    .hero-visual {
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      transform: translate(24px, 12px);
+    }
+
+    .portrait-frame {
+      width: min(410px, 30vw);
+      height: min(410px, 30vw);
+      flex: 0 0 auto;
+    }
+
+    .hero-name {
+      margin-top: 1.8rem;
+      text-align: center;
+      position: relative;
+      z-index: 5;
+      padding: 0 1rem;
+    }
+
+    .hero-name h2 {
+      font-size: clamp(2.3rem, 3vw, 3.35rem);
+      line-height: 1.05;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .hero-name p {
+      margin: .65rem 0 0;
+      font-size: .98rem;
+    }
+
+    .floating-card.card-one {
+      z-index: 6;
+    }
+
+    .floating-card.card-two {
+      z-index: 6;
+      right: -1.5rem;
+      bottom: 8.5rem;
+    }
+
+    @media (max-width: 1200px) and (min-width: 901px) {
+      .hero-grid { gap: 2.75rem; }
+      .hero-copy { padding-top: 20px; }
+      .hero h1 { font-size: clamp(2.8rem, 3.4vw, 3.8rem); max-width: 610px; }
+      .portrait-frame { width: min(380px, 29vw); height: min(380px, 29vw); }
+      .hero-visual { transform: translate(10px, 8px); }
+      .hero-name { margin-top: 1.5rem; }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        height: auto;
+        min-height: calc(100vh - 74px);
+        padding: 38px 0 42px;
+        overflow: visible;
+      }
+      .hero-grid {
+        height: auto;
+        gap: 3rem;
+      }
+      .hero-copy { padding-top: 0; }
+      .hero h1 {
+        font-size: clamp(2.7rem, 8vw, 4rem);
+        line-height: 1.06;
+        margin-bottom: 1.5rem;
+      }
+      .hero-text { margin-bottom: 1.75rem; }
+      .hero-actions { gap: 1rem; }
+      .hero-visual { transform: none; }
+      .portrait-frame {
+        width: min(380px, 78vw);
+        height: min(380px, 78vw);
+      }
+      .hero-name { margin-top: 1.5rem; }
+      .hero-name h2 { white-space: normal; }
+      .floating-card.card-two { right: -0.5rem; bottom: 5rem; }
+    }
+
+
+    /* ==========================================
+       CERTIFICATE BUTTONS + VIEWER
+    ========================================== */
+    .cert-grid {
+      align-items: stretch;
+    }
+
+    .cert-card {
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-7px);
+      border-color: #d4ad69;
+      box-shadow: 0 20px 45px rgba(11,31,51,.10);
+    }
+
+    .cert-year {
+      display: block;
+      margin-bottom: 1.5rem;
+      font-size: .75rem;
+      letter-spacing: .15em;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .certificate-btn {
+      margin-top: auto;
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: .8rem;
+      padding: .7rem 1rem .7rem 1.15rem;
+      border: 0;
+      border-radius: 999px;
+      background: #d4ad69;
+      color: #0B1F33;
+      font-family: "DM Sans", sans-serif;
+      font-size: .78rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(212,173,105,.25);
+      transition: transform .3s ease, background .3s ease, color .3s ease, box-shadow .3s ease;
+    }
+
+    .certificate-btn:hover {
+      transform: translateY(-3px);
+      background: #0B1F33;
+      color: #fff;
+      box-shadow: 0 12px 25px rgba(11,31,51,.22);
+    }
+
+    .certificate-arrow {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(11,31,51,.12);
+      font-size: 1rem;
+      transition: transform .3s ease, background .3s ease;
+    }
+
+    .certificate-btn:hover .certificate-arrow {
+      transform: translate(2px,-2px);
+      background: rgba(255,255,255,.15);
+    }
+
+    .certificate-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      padding: 30px;
+      background: rgba(11,31,51,.90);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .certificate-modal.active {
+      display: flex;
+    }
+
+    .certificate-modal-content {
+      position: relative;
+      width: min(1050px,95vw);
+      max-height: 90vh;
+      padding: 15px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 30px 90px rgba(0,0,0,.40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: certificatePop .35s ease;
+    }
+
+    .certificate-modal-content img {
+      display: block;
+      width: 100%;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .certificate-close {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      background: #d4ad69;
+      color: #0B1F33;
+      font-size: 1.7rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+      transition: transform .25s ease, background .25s ease;
+    }
+
+    .certificate-close:hover {
+      transform: rotate(90deg) scale(1.08);
+      background: #fff;
+    }
+
+    @keyframes certificatePop {
+      from { opacity: 0; transform: scale(.92) translateY(15px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .cert-grid { grid-template-columns: 1fr; }
+      .cert-card { min-height: 280px; }
+      .certificate-modal { padding: 20px; }
+      .certificate-modal-content { width: 100%; }
+    }
+
+    @media (max-width: 560px) {
+      .certificate-modal { padding: 12px; }
+      .certificate-modal-content { padding: 8px; border-radius: 12px; }
+      .certificate-close { width: 36px; height: 36px; top: -10px; right: -5px; font-size: 1.4rem; }
+    }
+
+
+    /* ==========================================
+       ACHIEVEMENT IMAGES
+    ========================================== */
+    .achievement-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .achievement-with-image {
+      display: grid;
+      grid-template-columns: 55px minmax(0, 1fr) 220px;
+      align-items: center;
+      gap: 1.25rem;
+      min-height: 180px;
+      overflow: hidden;
+    }
+
+    .achievement-content {
+      min-width: 0;
+    }
+
+    .achievement-content h3 {
+      margin-bottom: .35rem;
+    }
+
+    .achievement-image {
+      width: 220px;
+      height: 140px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .achievement-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .35s ease;
+    }
+
+    .achievement-with-image:hover .achievement-image img {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 1100px) {
+      .achievement-with-image {
+        grid-template-columns: 50px minmax(0, 1fr) 190px;
+      }
+
+      .achievement-image {
+        width: 190px;
+        height: 125px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .achievement-with-image {
+        grid-template-columns: 50px minmax(0, 1fr);
+      }
+
+      .achievement-image {
+        grid-column: 2;
+        width: 100%;
+        max-width: 420px;
+        height: 190px;
+        margin-top: .5rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .achievement-with-image {
+        grid-template-columns: 1fr;
+        gap: .75rem;
+      }
+
+      .achievement-with-image > span {
+        grid-column: 1;
+      }
+
+      .achievement-content {
+        grid-column: 1;
+      }
+
+      .achievement-image {
+        grid-column: 1;
+        width: 100%;
+        height: 190px;
+        margin-top: .25rem;
+      }
+    }
+
+
+
+    /* =========================================
+       FINAL CONTACT SECTION UPDATE
+    ========================================= */
+    .contact-section {
+      overflow: hidden;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 5rem;
+      min-height: 560px;
+    }
+
+    .contact-content {
+      max-width: 850px;
+    }
+
+    .contact-content .section-number {
+      color: #d4ad69;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3.5rem, 6vw, 6.2rem);
+      line-height: 1.02;
+      font-weight: 600;
+      max-width: 900px;
+      margin: 0;
+    }
+
+    .contact-content h2 em {
+      display: block;
+      color: #d4ad69;
+      font-style: italic;
+    }
+
+    .contact-description {
+      max-width: 720px;
+      margin: 2rem 0 2.5rem;
+      color: #e7dfd5;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    .contact-links a {
+      color: white;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255,255,255,.45);
+      padding-bottom: .35rem;
+      transition: all .3s ease;
+    }
+
+    .contact-links a:hover {
+      color: #d4ad69;
+      border-color: #d4ad69;
+      transform: translateY(-2px);
+    }
+
+    .contact-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-image-card {
+      position: relative;
+      width: 100%;
+      max-width: 470px;
+      height: 500px;
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.18);
+      background: #142b40;
+      box-shadow: 0 30px 70px rgba(0,0,0,.25);
+    }
+
+    .contact-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform .6s ease, filter .6s ease;
+    }
+
+    .contact-image-card:hover img {
+      transform: scale(1.04);
+      filter: brightness(.85);
+    }
+
+    .contact-image-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1.5rem;
+      background: linear-gradient(transparent, rgba(11,31,51,.9));
+      color: white;
+    }
+
+    .contact-image-overlay span {
+      font-size: .75rem;
+      letter-spacing: .18em;
+      font-weight: 700;
+      color: #d4ad69;
+    }
+
+    .contact-section .footer-line {
+      margin-top: 0;
+    }
+
+    @media (max-width: 900px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        min-height: auto;
+      }
+
+      .contact-content h2 {
+        font-size: clamp(3rem, 9vw, 5rem);
+      }
+
+      .contact-visual {
+        justify-content: flex-start;
+      }
+
+      .contact-image-card {
+        max-width: 520px;
+        height: 420px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .contact-container {
+        gap: 3rem;
+      }
+
+      .contact-content h2 {
+        font-size: 3.2rem;
+      }
+
+      .contact-description {
+        font-size: .95rem;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .contact-image-card {
+        width: 100%;
+        height: 360px;
+        border-radius: 24px;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#home">Welcome to my Portfolio</a>
+      <button class="menu-btn" aria-label="Open menu">☰</button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <h1 class="scroll-pop">
+    “Turning processes into <em class="highlight-blue">efficiency</em> and data into better <em class="highlight-blue">decisions</em>”
+</h1>
+          <p class="hero-text">
+            Operations & Supply Chain aspirant with an engineering foundation and hands-on exposure
+            to manufacturing, assembly, field operations, process improvement and data analytics.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore my work</a>
+            <a class="btn btn-secondary" href="#contact">Let's connect</a>
+          </div>
+          <div class="hero-tags">
+            <span>Operations</span><span>Supply Chain</span><span>Process Improvement</span><span>Analytics</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="portrait-frame">
+            <img src="assets/Profile.jpeg" alt="Parveen Kumar professional portrait" />
+          </div>
+          <div class="floating-card card-one"><strong>9.58</strong><small>B.Tech CGPA</small></div>
+          <div class="floating-card card-two"><strong>8.88</strong><small>MBA CGPA</small></div>
+          <div class="hero-name">
+            <h2>Parveen Kumar</h2>
+            <p>Operations and Supply Chain Aspirant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container two-col">
+        <div class="section-heading reveal">
+          <p class="section-number">01 / ABOUT</p>
+          <h2>Engineering mindset. <em>Management perspective.</em></h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>
+            I am pursuing an MBA in Finance & Operations at Lovely Professional University, building
+            on a B.Tech and Diploma in Mechanical Engineering. My experience across mechanical design,
+            assembly operations and field operations has shaped my interest in operational efficiency,
+            process improvement and data-driven decision making.
+          </p>
+          <p>
+            I enjoy understanding how work moves through a process, identifying bottlenecks and using
+            structured analysis to support practical improvements. My toolkit includes Excel, Power BI,
+            SQL, Tableau, SPSS and Google Sheets, alongside Lean and quality concepts.
+          </p>
+          <div class="about-photo">
+            <img src="assets/about.jpg" alt="Parveen Kumar" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section light-section">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="section-number">02 / EDUCATION</p>
+          <h2>Academic <em>foundation</em></h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="year">2025—2027</span>
+            <div>
+              <h3>Master of Business Administration</h3>
+              <p class="institution">Lovely Professional University • Phagwara, Punjab</p>
+              <p>Finance & Operations • CGPA: <strong>8.88</strong></p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="year">2020—2023</span>
+            <div>
+              <h3>Bachelor of Technology</h3>
+              <p class="institution">RIMT University • Mandi Gobindgarh, Punjab</p>
+              <p>Mechanical Engineering • CGPA: <strong>9.58</strong></p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="year">2017—2020</span>
+            <div>
+              <h3>Diploma</h3>
+              <p class="institution">RIMT Polytechnic College • Mandi Gobindgarh, Punjab</p>
+              <p>Mechanical Engineering • <strong>74%</strong></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number">03 / EXPERIENCE</p>
+          <h2>From shop floor to <em>management.</em></h2>
+        </div>
+
+        <article class="experience-card reveal">
+          <div class="experience-meta">
+            <span>FEB 2023 — JAN 2025</span>
+            <h3>Mechanical Design Engineer</h3>
+            <p>Red Engineers • Mohali</p>
+          </div>
+          <div class="experience-content">
+            <ul>
+              <li>Engineered standardized mechanical designs aligned with Australian compliance and industry regulations.</li>
+              <li>Directed end-to-end product lifecycle activities from conceptual modeling to final technical documentation.</li>
+              <li>Improved workflow accuracy by implementing structured validation checks during design stages.</li>
+            </ul>
+          </div>
+          <img src="assets/experience.jpg" alt="Parveen Kumar at work" />
+        </article>
+
+        <article class="experience-card reverse reveal">
+          <div class="experience-meta">
+            <span>FEB 2020 — OCT 2020</span>
+            <h3>Assembly Engineer</h3>
+            <p>John Deere Ind Pvt. Ltd. • Patiala</p>
+          </div>
+
+          <div class="experience-content">
+            <ul>
+              <li>Managed combine harvester assembly operations while adhering to strict SOP and quality benchmarks.</li>
+              <li>Optimized resource allocation to support multi-variant production schedules.</li>
+            </ul>
+          </div>
+
+          <div class="experience-visual">
+    <div class="image-card">
+        <img src="assets/John deere.png" alt="Parveen Kumar at John Deere" />
+    </div>
+</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section dark-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number">04 / PROJECTS</p>
+          <h2>Projects that turn learning into impact</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured reveal">
+            <div class="project-top"><span>APR 2026 — MAY 2026</span><span>LIVE PROJECT</span></div>
+            <h3>Supply Chain Optimization Analysis</h3>
+            <p class="project-client">Joginder Vegetables • Lovely Professional University</p>
+            <p>
+              Conducted end-to-end supply chain analysis by mapping procurement, inventory management,
+              distribution and customer delivery processes to identify operational bottlenecks.
+            </p>
+            <div class="project-tags"><span>Lead Time</span><span>Bullwhip Effect</span><span>SCM</span></div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top"><span>JAN 2026 — FEB 2026</span><span>SERVICE OPERATIONS</span></div>
+            <h3>SERVQUAL Service Quality Analysis</h3>
+            <p class="project-client">Kotak Mahindra Bank vs HDFC Bank</p>
+            <p>
+              Evaluated reliability, assurance, responsiveness, empathy and tangibles; identified
+              performance gaps and recommended improvements to service delivery.
+            </p>
+            <div class="project-tags"><span>SERVQUAL</span><span>Benchmarking</span><span>Quality</span></div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top"><span>AUG 2025 — OCT 2025</span><span>ANALYTICS</span></div>
+            <h3>Operations Performance Dashboard</h3>
+            <p class="project-client">Lovely Professional University</p>
+            <p>
+              Developed Excel and Power BI KPI dashboards tracking productivity, operational efficiency
+              and cycle time, and presented actionable insights through interactive reports.
+            </p>
+            <div class="project-tags"><span>Excel</span><span>Power BI</span><span>KPI</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="internship" class="section internship-section">
+      <div class="container two-col internship-grid">
+        <div class="internship-photo reveal">
+          <img src="assets/internship.png" alt="Parveen Kumar during field operations internship" />
+        </div>
+        <div class="reveal">
+          <p class="section-number">05 / INTERNSHIP</p>
+          <h2>Learning operations <em>in the field.</em></h2>
+          <p class="role">Field Operation Intern — General Trade</p>
+          <p class="institution">Weikfield Foods Pvt. Ltd. • Punjab • Jun 2026 — Aug 2026</p>
+          <ul class="clean-list">
+            <li>Conducted market surveys across <strong>40+ retail outlets daily</strong> to analyze customer purchase behavior.</li>
+            <li>Performed competitor analysis across product assortment, pricing, shelf visibility and product availability.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section light-section">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="section-number">06 / SKILLS</p>
+          <h2>Capabilities I bring to the <em>table.</em></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-panel reveal">
+            <h3>Operations & Quality</h3>
+            <div class="skill-pills">
+              <span>5S</span><span>Lean Operations</span><span>TQM</span><span>SOPs</span><span>Process Improvement</span>
+            </div>
+          </div>
+          <div class="skill-panel reveal">
+            <h3>Analytics & Tools</h3>
+            <div class="skill-pills">
+              <span>MS Excel</span><span>Power BI</span><span>SQL</span><span>Tableau</span><span>SPSS</span><span>Minitab</span><span>Google Sheets</span><span>PowerPoint</span>
+            </div>
+          </div>
+          <div class="skill-panel reveal">
+            <h3>Professional Skills</h3>
+            <div class="skill-pills">
+              <span>Communication</span><span>Leadership</span><span>Problem Solving</span><span>Teamwork</span><span>Cross-collaboration</span><span>Time Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number">07 / CERTIFICATIONS</p>
+          <h2>Continuous <em>learning.</em></h2>
+        </div>
+        <div class="cert-grid">
+
+          <article class="cert-card reveal">
+            <span class="cert-year">2025</span>
+            <h3>Lean Six Sigma Yellow Belt</h3>
+            <p>AIGPE TM • Nov 2025 — Dec 2025</p>
+            <button class="certificate-btn" type="button" onclick="openCertificate('assets/Yellow Belt Certification.png')">
+              <span>View Certificate</span><span class="certificate-arrow">↗</span>
+            </button>
+          </article>
+
+          <article class="cert-card reveal">
+            <span class="cert-year">2025</span>
+            <h3>Lean Six Sigma White Belt</h3>
+            <p>C.S.S.C • Sep 2025 — Oct 2025</p>
+            <button class="certificate-btn" type="button" onclick="openCertificate('assets/White Belt Certification.png')">
+              <span>View Certificate</span><span class="certificate-arrow">↗</span>
+            </button>
+          </article>
+
+          <article class="cert-card reveal">
+            <span class="cert-year">2025</span>
+            <h3>Advanced Certification in Data Analytics</h3>
+            <p>IRA Skills • Mar 2025 — Apr 2025</p>
+            <button class="certificate-btn" type="button" onclick="openCertificate('assets/Data Analytics Certification.jpg')">
+              <span>View Certificate</span><span class="certificate-arrow">↗</span>
+            </button>
+          </article>
+
+        </div>
+
+        <div id="certificateModal" class="certificate-modal" aria-hidden="true">
+          <div class="certificate-modal-content" role="dialog" aria-modal="true" aria-label="Certificate preview">
+            <button class="certificate-close" type="button" onclick="closeCertificate()" aria-label="Close certificate">×</button>
+            <img id="certificateImage" src="" alt="Certificate preview">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="section achievement-section">
+      <div class="container two-col">
+        <div class="section-heading reveal">
+          <p class="section-number">08 / ACHIEVEMENTS</p>
+          <h2>Beyond academics: <em>teamwork & leadership.</em></h2>
+        </div>
+        <div class="achievement-list">
+          <article class="achievement achievement-with-image reveal">
+            <span>01</span>
+            <div class="achievement-content">
+              <h3>Fresher Cricket League Champion</h3>
+              <p>Secured 1st Rank at Lovely Professional University with team Verto Warriors, strengthening leadership, resilience and decision-making.</p>
+            </div>
+            <div class="achievement-image">
+              <img src="assets/Champion.jpeg" alt="Fresher Cricket League Champion">
+            </div>
+          </article>
+
+          <article class="achievement achievement-with-image reveal">
+            <span>02</span>
+            <div class="achievement-content">
+              <h3>Centific Hackathon Event</h3>
+              <p>Engaged in AI-driven workforce operation strategies and collaborative problem solving.</p>
+            </div>
+            <div class="achievement-image">
+              <img src="assets/Centific.jpeg" alt="Centific Hackathon Event">
+            </div>
+          </article>
+
+          <article class="achievement achievement-with-image reveal">
+            <span>03</span>
+            <div class="achievement-content">
+              <h3>Round Table Discourse</h3>
+              <p>Contributed analytical perspectives in group discussion events, demonstrating structured thinking and communication.</p>
+            </div>
+            <div class="achievement-image">
+              <img src="assets/Group-discussion.jpeg" alt="Round Table Discourse">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-container">
+
+        <!-- LEFT: PROFESSIONAL CONTACT MESSAGE -->
+        <div class="contact-content reveal">
+          <p class="section-number">09 / CONTACT</p>
+
+          <h2>
+            Let’s build
+            <em>something meaningful.</em>
+          </h2>
+
+          <p class="contact-description">
+            I’m open to opportunities where I can contribute to Operations,
+            Supply Chain, Process Improvement and Business Analytics while
+            continuing to create measurable business impact.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:parveenkumar628379@gmail.com">parveenkumar628379@gmail.com</a>
+            <a href="tel:+916283790385">+91 6283790385</a>
+            <a href="https://www.linkedin.com/in/thisisparveen/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: CONNECT IMAGE -->
+        <div class="contact-visual reveal">
+          <div class="contact-image-card">
+            <img src="assets/Connect with me.png" alt="Connect with Parveen Kumar" />
+            <div class="contact-image-overlay">
+              <span>LET’S CONNECT</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="container">
+        <div class="footer-line">
+          <span>Parveen Kumar • MBA Finance &amp; Operations</span>
+          <span>2026</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    function openCertificate(certificatePath) {
+      const modal = document.getElementById("certificateModal");
+      const image = document.getElementById("certificateImage");
+      image.src = certificatePath;
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeCertificate() {
+      const modal = document.getElementById("certificateModal");
+      const image = document.getElementById("certificateImage");
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      image.src = "";
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("click", function(event) {
+      const modal = document.getElementById("certificateModal");
+      if (event.target === modal) closeCertificate();
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") closeCertificate();
+    });
+  </script>
+
+</body>
+</html>
+```
